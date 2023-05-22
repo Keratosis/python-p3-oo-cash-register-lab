@@ -33,6 +33,22 @@ class CashRegister:
         del self.prices[-last_quantity:]
        else:
         print("No items to void.")
+
+
+# Create a CashRegister instance
+cash_register = CashRegister(discount=10, total=50.0)
+
+# Print the attributes
+print(f"Discount: {cash_register.discount}")
+print(f"Total: {cash_register.total}")
+print(f"Items: {cash_register.items}")
+print(f"Prices: {cash_register.prices}")
+
+# Call the methods
+cash_register.add_item("Apple", 1.0, 3)
+cash_register.apply_discount()
+cash_register.void_last_transaction()
+
         
     
    
